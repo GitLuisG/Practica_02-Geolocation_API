@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Práctica 02</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>Práctica 02</h1>
+        <h6>Uso de la API de Javascript de Geolocalización</h6>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <h6>Opciones</h6>
+                <div class="form-group form-check">
+                    <label for="chkEnableHighAccuracy" class="form-check-label">
+                        <input type="checkbox" id="chkEnableHighAccuracy" class="form-check-input"  />
+                        Habilitar Alta Precisión:
+                    </label>
+                    
+                </div>
+                <div class="form-group">
+                    <label for="txtTimeout">Tiempo de Espera (milisegundos):</label>
+                    <input id="txtTimeout" type="number" value="3000" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="txtMaximumAge">Tiempo Cache (milisegundos):</label>
+                    <input id="txtMaximumAge" type="number" value="0" />
+                </div>
+                <div class="form-group">
+                    <input id="btnObtenerGeolocalizacion" type="button" class="btn btn-primary" value="Obtener Geolocalización" />
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                <h6>Resultado</h6>
+                <p>Estatus: <strong id="sEstatus"></strong></p>
+                <p>Coordenadas: <a id="aMap" target="_blank"><strong id="sLat">[NO LAT]</strong>, <strong id="sLon">[NO LON]</strong></a> </p>
+                <p>Precisión: <strong id="sAcc">[NO ACC]</strong></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
